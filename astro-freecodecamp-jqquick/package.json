@@ -9,11 +9,34 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "keywords": ["prettier"],
+  "prettier": {
+    "overrides": [
+      {
+        "files": ["*.tsx", "*.ts", "*.js", "*.jsx", "*.astro"],
+        "options": {
+          "printWidth": 90
+        }
+      },
+      {
+        "files": ["*.json"],
+        "options": {
+          "parser": "json",
+          "printWidth": 90
+        }
+      }
+    ]
+  },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^5.1.2",
     "astro": "^4.16.0",
+    "date-fns": "^4.1.0",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
